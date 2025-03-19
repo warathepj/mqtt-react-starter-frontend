@@ -1,69 +1,126 @@
-# Welcome to your Lovable project
+# IoT Visualization Project
 
-## Project info
+A comprehensive IoT visualization system consisting of three main components: frontend interface, backend MQTT service, and device simulator.
 
-**URL**: https://lovable.dev/projects/e59fa446-e442-4201-a832-8ee9804efb31
+## Project Structure
 
-## How can I edit this code?
+```
+├── frontend/     # React-based web interface
+├── backend/      # MQTT publisher/subscriber service
+└── simulator/    # IoT device simulator
+```
 
-There are several ways of editing your application.
+## Repositories
 
-**Use Lovable**
+- Frontend: [https://github.com/warathepj/mqtt-react-starter-frontend.git](https://github.com/warathepj/mqtt-react-starter-frontend.git)
+- Backend: [https://github.com/warathepj/mqtt-react-starter-backend.git](https://github.com/warathepj/mqtt-react-starter-backend.git)
+- Simulator: [https://github.com/warathepj/mqtt-react-starter-simulator.git](https://github.com/warathepj/mqtt-react-starter-simulator.git)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e59fa446-e442-4201-a832-8ee9804efb31) and start prompting.
+## Components
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
 
-**Use your preferred IDE**
+- Built with Vite, TypeScript, React, shadcn-ui, and Tailwind CSS
+- Modern, responsive UI with elegant animations
+- Real-time data visualization
+- Toast notifications system for user feedback
+- MQTT message display component
+- Routing system with React Router
+- Query management with React Query
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Tooltip provider for enhanced UI interactions
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Backend
 
-Follow these steps:
+- MQTT publisher/subscriber implementation
+- Uses public MQTT broker (test.mosquitto.org)
+- Handles message routing and data processing
+- Simple error handling and connection status logging
+- REST API endpoints for MQTT message publishing
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Simulator
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Device simulation for testing
+- Built with the same tech stack as frontend
+- Generates mock IoT data
+- Message publishing capabilities
+- Real-time UI updates
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Features
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Real-time communication between components via MQTT
+- Elegant and responsive design across all components
+- Interactive UI elements with animations
+- Toast notifications for system feedback
+- Comprehensive error handling
+- Cross-component message broadcasting
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js & npm - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Git
+
+### Installation
+
+1. Clone the repositories:
+
+```bash
+# Frontend
+git clone https://github.com/warathepj/mqtt-react-starter-frontend.git
+
+# Backend
+git clone https://github.com/warathepj/mqtt-react-starter-backend.git
+
+# Simulator
+git clone https://github.com/warathepj/mqtt-react-starter-simulator.git
+```
+
+2. Install dependencies for each component:
+
+```bash
+# Frontend
+cd mqtt-react-starter-frontend
+npm install
+
+# Backend
+cd mqtt-react-starter-backend
+npm install
+
+# Simulator
+cd mqtt-react-starter-simulator
+npm install
+```
+
+3. Start the services:
+
+```bash
+# Frontend
+npm run dev
+
+# Backend
+node publisher.js
+node subscriber.js
+
+# Simulator
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Testing
 
-**Use GitHub Codespaces**
+Each component can be tested independently:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Frontend: Test message sending via the UI button
+- Simulator: Test device simulation and message broadcasting
+- Backend: Monitor MQTT message flow and API endpoints
 
-## What technologies are used for this project?
+## License
 
-This project is built with .
+MIT
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Support
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e59fa446-e442-4201-a832-8ee9804efb31) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
+![PromptPay QR](https://warathepj.github.io/js-ai-gallery/public/image/promptpay-20.png)
